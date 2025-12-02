@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabasEHandel
+namespace DatabasEHandel.Models
 {
-    public class ShopContext
+    public class Categorie
     {
-
     }
 }
