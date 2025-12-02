@@ -10,10 +10,10 @@ namespace DatabasEHandel.Models
     {
         public int OrderId { get; set; }
 
-        // Egenskaper
+        // Properties
         public DateTime OrderDate { get; set; }
         public string CustomerName { get; set; } = string.Empty;
         public string CustomerEmail { get; set; } = string.Empty;
-        public string TotalAmount { get; set; }
+        public decimal TotalAmount { get; set; }
     }
 }

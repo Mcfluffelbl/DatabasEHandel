@@ -12,7 +12,7 @@ namespace DatabasEHandel.Models
         // PK
         public int CustomerId { get; set; }
 
-        // Egenskaper
+        // Properties
         [Required, MaxLength(100)]
         public string Name { get; set; } = null!;
         [Required, MaxLength(100)]
@@ -20,7 +20,7 @@ namespace DatabasEHandel.Models
         [Required, MaxLength(100)]
         public string City { get; set; } = null!;
 
-        // En kund kan ha flera ordrar
+        // One Customer can have many Orders
         public List<Order> Orders { get; set; } = new();
     }
 }

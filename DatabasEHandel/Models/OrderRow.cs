@@ -16,16 +16,16 @@ namespace DatabasEHandel.Models
         public int OrderId { get; set; }
         public int ProductId { get; set; }
 
-        // Egenskaper
+        // Properties
         [Required]
         public int Quantity { get; set; }
         [Required]
         public decimal UnitPrice { get; set; }
 
-        // Tillgång till orderinfo för varje orderrad
+        // Access to order info for each order line
         public Order? Order { get; set; }
 
-        // Tillgång till produktinfo för varje orderrad
+        // Access to product info for each order line
         public Product? Product { get; set; }
     }
 }

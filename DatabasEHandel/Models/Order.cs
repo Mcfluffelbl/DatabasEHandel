@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DatabasEHandel.Enum;
 
 namespace DatabasEHandel.Models
 {
@@ -14,14 +15,15 @@ namespace DatabasEHandel.Models
         // FK
         public int CustomerId { get; set; }
 
-        // Egenskaper
+        // Properties
         public DateTime OrderDate { get; set; }
+        public Status Status { get; set; }
         public decimal TotalAmount { get; set; }
 
-        // Tillgång till kundinfo för varje order
+        // Acess to customer info for each order
         public Customer? Customer { get; set; }
 
-        // En order kan ha flera orderrader
+        // One order can have multiple OrderRows
         public List<OrderRow> OrderRows { get; set; } = new();
     }
 }
