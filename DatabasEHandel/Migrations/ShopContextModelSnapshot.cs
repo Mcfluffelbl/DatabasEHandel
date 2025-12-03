@@ -80,9 +80,6 @@ namespace DatabasEHandel.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ProductId1")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
 
@@ -94,8 +91,6 @@ namespace DatabasEHandel.Migrations
                     b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
-
-                    b.HasIndex("ProductId1");
 
                     b.ToTable("OrderRows");
                 });
@@ -166,14 +161,10 @@ namespace DatabasEHandel.Migrations
                         .IsRequired();
 
                     b.HasOne("DatabasEHandel.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("OrderRows")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("DatabasEHandel.Models.Product", null)
-                        .WithMany("OrderRows")
-                        .HasForeignKey("ProductId1");
 
                     b.Navigation("Order");
 

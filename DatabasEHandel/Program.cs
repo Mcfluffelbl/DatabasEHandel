@@ -9,8 +9,6 @@ using System.Xml.Serialization;
 using static System.Reflection.Metadata.BlobBuilder;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-Console.WriteLine("Hello, World!");
-
 // Intro
 Console.WriteLine("DB: " + Path.Combine(AppContext.BaseDirectory, "shop.db"));
 Console.WriteLine("Hello, and welcome to your´e E-Store!");

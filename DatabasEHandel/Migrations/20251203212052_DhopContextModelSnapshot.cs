@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DatabasEHandel.Migrations
 {
     /// <inheritdoc />
-    public partial class ShopContextModelSnapshot : Migration
+    public partial class DhopContextModelSnapshot : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,8 +72,7 @@ namespace DatabasEHandel.Migrations
                     OrderId = table.Column<int>(type: "INTEGER", nullable: false),
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false),
                     Quantity = table.Column<int>(type: "INTEGER", nullable: false),
-                    UnitPrice = table.Column<decimal>(type: "TEXT", nullable: false),
-                    ProductId1 = table.Column<int>(type: "INTEGER", nullable: true)
+                    UnitPrice = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,11 +89,6 @@ namespace DatabasEHandel.Migrations
                         principalTable: "Products",
                         principalColumn: "ProductId",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_OrderRows_Products_ProductId1",
-                        column: x => x.ProductId1,
-                        principalTable: "Products",
-                        principalColumn: "ProductId");
                 });
 
             migrationBuilder.CreateIndex(
@@ -106,11 +100,6 @@ namespace DatabasEHandel.Migrations
                 name: "IX_OrderRows_ProductId",
                 table: "OrderRows",
                 column: "ProductId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_OrderRows_ProductId1",
-                table: "OrderRows",
-                column: "ProductId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_CustomerId",

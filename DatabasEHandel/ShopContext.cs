@@ -103,7 +103,7 @@ namespace DatabasEHandel
 
                 // One OrderRow has one Product
                 e.HasOne(or => or.Product)
-                 .WithMany()
+                 .WithMany(p => p.OrderRows)
                  .HasForeignKey(or => or.ProductId)
                  .OnDelete(DeleteBehavior.Restrict);
             });
