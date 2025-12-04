@@ -96,7 +96,8 @@ while (true)
     }
 }
 return;
-
+// Lists -
+// List customers 
 static async Task ListCustomers()
 {
     using var db = new ShopContext();
@@ -107,7 +108,7 @@ static async Task ListCustomers()
         Console.WriteLine($"ID: {customer.CustomerId}, Name: {customer.Name}, Email: {customer.Email}, City: {customer.City}");
     }
 }
-
+// List products
 static async Task ListProducts()
 {
     using var db = new ShopContext();
@@ -118,7 +119,7 @@ static async Task ListProducts()
         Console.WriteLine($"ID: {product.ProductId}, Name: {product.ProductName}, Price: {product.Price}, Stock: {product.StockQuantity}");
     }
 }
-
+// List Orders
 static async Task ListOrders()
 {
     using var db = new ShopContext();
@@ -131,3 +132,13 @@ static async Task ListOrders()
         Console.WriteLine($"ID: {order.OrderId}, Customer: {order.Customer!.Name}, Date: {order.OrderDate.ToShortDateString()}, Status: {order.Status}, Total: {order.TotalAmount}");
     }
 }
+
+// Skapa ny produkt/kategori
+// Visa / Lista produkter / kategorier
+// Ändra produkt/kategori
+// Ta bort produkt/kategori
+
+// När man matar in data ska systemet kontrollera t.ex.:
+// Obligatoriska fält(t.ex.namn får inte vara tomt)
+// Rätt datatyper(t.ex.pris måste vara tal)
+// Rimliga värden
