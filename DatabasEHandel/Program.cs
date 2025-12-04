@@ -56,6 +56,14 @@ using (var db = new ShopContext())
 while (true)
 {
     Console.WriteLine("\nMenu:");
+    Console.WriteLine("1. Lists");
+    Console.WriteLine("2. Customers");
+    Console.WriteLine("3. Orders");
+    Console.WriteLine("4. Products");
+    Console.WriteLine("0. Exit");
+    Console.Write("Choose an option: ");
+
+    Console.WriteLine("\nList Menu:");
     Console.WriteLine("1. List Customers");
     Console.WriteLine("2. List Products");
     Console.WriteLine("3. List Orders");
